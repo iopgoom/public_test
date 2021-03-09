@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.cell{
+    float: left;
+}
+
+.row::after{
+    clear: both;
+    content: '';
+    display:  block;
+}
+
+.wrap{
+    width: 100% ;
+    height: 100vh;
+    background-color: #ddd;
+    position: relative;
+    overflow-x: hidden ;
+}
+
+.animation-box{
+    position:  absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.animation-box > .animation-line{
+    width: 7000px;    
+}
+.animation-box > .animation-line > .img-list{
+    width: 3500px;
+}
+.animation-box > .animation-line > .img-list > .img-box {
+    width: 700px ;
+}
+.animation-box > .animation-line > .img-list > .img-box > img{
+    width: 100%;
+}
+
+.animation-play{
+    animation-name: test ;
+    animation-duration: 5s ;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes test {
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-50%);        
+    }
+}
+
+
+
+
+
+
+
+
+
